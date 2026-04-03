@@ -1,26 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --font-inter: 'Inter', sans-serif;
+
+  --color-background: hsl(210 40% 98%);
+  --color-foreground: hsl(215 25% 15%);
+  --color-card: hsl(0 0% 100%);
+  --color-card-foreground: hsl(215 25% 15%);
+  --color-popover: hsl(0 0% 100%);
+  --color-popover-foreground: hsl(215 25% 15%);
+  --color-primary: hsl(193 66% 49%);
+  --color-primary-foreground: hsl(0 0% 100%);
+  --color-secondary: hsl(149 80% 90%);
+  --color-secondary-foreground: hsl(162 89% 16%);
+  --color-muted: hsl(210 20% 96%);
+  --color-muted-foreground: hsl(215 15% 45%);
+  --color-accent: hsl(149 80% 90%);
+  --color-accent-foreground: hsl(162 89% 16%);
+  --color-destructive: hsl(0 84.2% 60.2%);
+  --color-destructive-foreground: hsl(0 0% 98%);
+  --color-border: hsl(210 20% 90%);
+  --color-input: hsl(210 20% 90%);
+  --color-ring: hsl(162 89% 16%);
+  --color-chart-1: hsl(162 89% 16%);
+  --color-chart-2: hsl(149 80% 50%);
+  --color-chart-3: hsl(197 37% 24%);
+  --color-chart-4: hsl(43 74% 66%);
+  --color-chart-5: hsl(27 87% 67%);
+  --radius: 0.75rem;
+  --color-sidebar-background: hsl(0 0% 98%);
+  --color-sidebar-foreground: hsl(240 5.3% 26.1%);
+  --color-sidebar-primary: hsl(162 89% 16%);
+  --color-sidebar-primary-foreground: hsl(0 0% 98%);
+  --color-sidebar-accent: hsl(149 80% 90%);
+  --color-sidebar-accent-foreground: hsl(162 89% 16%);
+  --color-sidebar-border: hsl(220 13% 91%);
+  --color-sidebar-ring: hsl(162 89% 16%);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  * {
+    border-color: var(--color-border);
+    outline-color: color-mix(in srgb, var(--color-ring) 50%, transparent);
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-inter);
+  }
 }
