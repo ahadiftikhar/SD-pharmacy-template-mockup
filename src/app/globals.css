@@ -41,6 +41,10 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   * {
     border-color: var(--color-border);
     outline-color: color-mix(in srgb, var(--color-ring) 50%, transparent);

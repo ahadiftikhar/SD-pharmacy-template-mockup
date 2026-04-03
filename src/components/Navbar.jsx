@@ -11,19 +11,25 @@ const navItems = [
     href: "#services",
     dropdown: [
       { label: "Vitamin B12 Injection", href: "https://lynehampharmacy.co.uk/vitamin-b12-injection-swindon/" },
-      { label: "Speciality Vaccine", href: "https://lynehampharmacy.co.uk/speciality-vaccine-wiltshire/" },
-      { label: "Hajj & Umrah Vaccine", href: "https://lynehampharmacy.co.uk/hajj-umrah-vaccine-wiltshire/" },
-      { label: "Covid Vaccination Centre", href: "https://lynehampharmacy.co.uk/covid-vaccination-centre/" },
       { label: "Antimalarials", href: "https://lynehampharmacy.co.uk/antimalarials-wiltshire/" },
+      { label: "Erectile Dysfunction", href: "https://lynehampharmacy.co.uk/" },
+      { label: "NHS Prescriptions", href: "https://lynehampharmacy.co.uk/" },
+      { label: "Private Prescriptions", href: "https://lynehampharmacy.co.uk/" },
+      { label: "Smoking Cessation", href: "https://lynehampharmacy.co.uk/" },
+      { label: "Weight Loss", href: "https://lynehampharmacy.co.uk/" },
     ],
   },
   {
     label: "Vaccinations",
     href: "#travel",
     dropdown: [
-      { label: "Travel Vaccines", href: "https://lynehampharmacy.co.uk/travel-clinic/" },
+      { label: "Travel Clinic", href: "https://lynehampharmacy.co.uk/travel-clinic/" },
+      { label: "Speciality Vaccine", href: "https://lynehampharmacy.co.uk/speciality-vaccine-wiltshire/" },
+      { label: "Hajj & Umrah", href: "https://lynehampharmacy.co.uk/hajj-umrah-vaccine-wiltshire/" },
       { label: "Yellow Fever", href: "https://lynehampharmacy.co.uk/yellow-fever-vaccine/" },
-      { label: "Flu Vaccination", href: "#" },
+      { label: "Covid Vaccination", href: "https://lynehampharmacy.co.uk/covid-vaccination-centre/" },
+      { label: "Flu Vaccination", href: "https://lynehampharmacy.co.uk/" },
+      { label: "Vaccine Prices", href: "https://lynehampharmacy.co.uk/" },
     ],
   },
   {
@@ -31,8 +37,12 @@ const navItems = [
     href: "#pharmacy-first",
     dropdown: [
       { label: "Sore Throat", href: "https://lynehampharmacy.co.uk/pharmacy-first-sore-throat-wiltshire/" },
-      { label: "Sinusitis", href: "#" },
-      { label: "Earache", href: "#" },
+      { label: "Shingles", href: "https://lynehampharmacy.co.uk/" },
+      { label: "Earache", href: "https://lynehampharmacy.co.uk/" },
+      { label: "Sinusitis", href: "https://lynehampharmacy.co.uk/" },
+      { label: "Impetigo", href: "https://lynehampharmacy.co.uk/" },
+      { label: "Uncomplicated UTIs", href: "https://lynehampharmacy.co.uk/" },
+      { label: "Infected Insect Bites", href: "https://lynehampharmacy.co.uk/" },
     ],
   },
   { label: "Contact Us", href: "#contact" },
@@ -79,7 +89,7 @@ export default function Navbar() {
       </div>
 
       {/* Main nav */}
-      <nav className="bg-white/95 backdrop-blur-xl border-b border-border/50 shadow-sm">
+      <nav className="bg-white/80 backdrop-blur-md border-b border-border/50 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
@@ -100,14 +110,23 @@ export default function Navbar() {
                   onMouseEnter={() => item.dropdown && setOpenDropdown(item.label)}
                   onMouseLeave={() => setOpenDropdown(null)}
                 >
-                  {item.href.startsWith("#") ? (
-                    <a
-                      href={item.href}
-                      className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-foreground/70 hover:text-primary transition-colors duration-200 rounded-lg hover:bg-secondary/40"
-                    >
-                      {item.label}
-                      {item.dropdown && <ChevronDown className="w-3.5 h-3.5 opacity-60" />}
-                    </a>
+                  {item.href.startsWith("#") || item.href === "/" ? (
+                    item.href === "/" ? (
+                      <Link
+                        to="/"
+                        className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-foreground/70 hover:text-primary transition-colors duration-200 rounded-lg hover:bg-secondary/40"
+                      >
+                        {item.label}
+                      </Link>
+                    ) : (
+                      <a
+                        href={item.href}
+                        className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-foreground/70 hover:text-primary transition-colors duration-200 rounded-lg hover:bg-secondary/40"
+                      >
+                        {item.label}
+                        {item.dropdown && <ChevronDown className="w-3.5 h-3.5 opacity-60" />}
+                      </a>
+                    )
                   ) : (
                     <Link
                       to={item.href}
@@ -139,7 +158,7 @@ export default function Navbar() {
             <div className="hidden lg:flex items-center gap-3">
               <a
                 href="tel:01249892813"
-                className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-primary/30 text-primary px-5 py-2 text-sm font-semibold hover:bg-secondary/50 hover:border-primary/50 transition-all duration-300"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-primary/40 text-primary px-5 py-2 text-sm font-medium hover:bg-secondary/50 transition-all duration-200"
               >
                 <Phone className="w-3.5 h-3.5" />
                 Call Us
@@ -148,9 +167,9 @@ export default function Navbar() {
                 href="https://my.scripter.digital/appointment/organization/12?location_id=5"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-full bg-primary text-primary-foreground px-5 py-2 text-sm font-semibold shadow-md shadow-primary/25 hover:shadow-lg hover:shadow-primary/35 hover:scale-[1.02] transition-all duration-300"
+                className="inline-flex items-center justify-center rounded-full bg-primary text-primary-foreground px-5 py-2 text-sm font-semibold hover:opacity-90 transition-all duration-200"
               >
-                Book Now
+                Book Online
               </a>
             </div>
 
@@ -207,7 +226,7 @@ export default function Navbar() {
               <div className="pt-4 border-t border-border/50 space-y-3">
                 <a
                   href="tel:01249892813"
-                  className="flex items-center justify-center gap-2 rounded-full border-2 border-primary/30 text-primary px-6 py-3 text-base font-semibold w-full"
+                  className="flex items-center justify-center gap-2 rounded-full border border-primary/40 text-primary px-6 py-3 text-base font-medium w-full"
                 >
                   <Phone className="w-4 h-4" />
                   Call Us
@@ -216,9 +235,9 @@ export default function Navbar() {
                   href="https://my.scripter.digital/appointment/organization/12?location_id=5"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center rounded-full bg-primary text-primary-foreground px-6 py-3 text-base font-semibold w-full shadow-md"
+                  className="flex items-center justify-center rounded-full bg-primary text-primary-foreground px-6 py-3 text-base font-semibold w-full"
                 >
-                  Book Now
+                  Book Online
                 </a>
               </div>
             </div>

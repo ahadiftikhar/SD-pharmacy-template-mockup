@@ -15,7 +15,7 @@ export default function CTASection() {
           <div className="relative px-8 py-16 sm:px-16 sm:py-20">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
-                <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+                <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
                   Ready to Put Your Health First?
                 </h2>
                 <p className="text-lg text-white/70 leading-relaxed">

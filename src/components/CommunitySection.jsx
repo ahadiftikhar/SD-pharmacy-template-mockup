@@ -23,7 +23,7 @@ export default function CommunitySection() {
             <span className="text-xs font-semibold text-white/80 uppercase tracking-wider">Our Community</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight tracking-tight">
             More Than a Pharmacy — We're Part of Your Family
           </h2>
 

@@ -31,7 +31,7 @@ export default function ServicesOverview() {
         {/* Section header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
           <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-3">What We Offer</p>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-foreground tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-bold text-foreground tracking-tight">
             Comprehensive Pharmacy Services
           </h2>
           <p className="mt-4 text-muted-foreground text-lg leading-relaxed">

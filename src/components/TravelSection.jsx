@@ -27,7 +27,7 @@ export default function TravelSection() {
           <div className="space-y-8">
             <div>
               <p className="text-sm font-semibold text-secondary uppercase tracking-wider mb-3">Travel Health</p>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight">
                 Every Vaccine <br />
                 <span className="text-secondary">For Every Trip</span>
               </h2>
@@ -65,7 +65,7 @@ export default function TravelSection() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {vaccines.map((v) => (
                   <div key={v} className="flex items-center gap-2.5 text-sm text-white/85 font-medium">
-                    <CheckCircle className="w-4 h-4 text-secondary flex-shrink-0" />
+                    <CheckCircle className="w-4 h-4 text-secondary shrink-0" />
                     {v}
                   </div>
                 ))}
