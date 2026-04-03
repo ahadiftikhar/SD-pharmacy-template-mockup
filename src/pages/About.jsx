@@ -1,6 +1,6 @@
 "use client"
 
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { ArrowRight, Award, Users, Clock, Heart } from "lucide-react";
 
 const values = [
@@ -113,7 +113,7 @@ export default function About() {
             to find out how we can help with your healthcare needs.
           </p>
           <Link
-            to="/contact"
+            href="/contact"
             className="inline-flex items-center justify-center gap-2 rounded-full bg-primary text-primary-foreground px-8 py-4 text-base font-semibold shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 hover:scale-[1.02] transition-all duration-300"
           >
             Get in Touch

@@ -49,7 +49,7 @@ const getAppParams = () => {
     }),
     token: getAppParamValue("access_token", { removeFromUrl: true }),
     fromUrl: getAppParamValue("from_url", {
-      defaultValue: window.location.href,
+      defaultValue: typeof window !== "undefined" ? window.location.href : undefined,
     }),
     functionsVersion: getAppParamValue("functions_version", {
       defaultValue: process.env.NEXT_PUBLIC_BASE44_FUNCTIONS_VERSION,

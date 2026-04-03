@@ -1,6 +1,6 @@
 "use client"
 
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { Pill, Syringe, Stethoscope, Heart, Thermometer, Plane, ArrowRight, CheckCircle } from "lucide-react";
 
 const services = [
@@ -88,7 +88,7 @@ export default function Services() {
           <div className="text-center mt-16">
             <p className="text-muted-foreground mb-6">Can't find what you're looking for? Get in touch — we may be able to help.</p>
             <Link
-              to="/contact"
+              href="/contact"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-primary text-primary-foreground px-8 py-4 text-base font-semibold shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 hover:scale-[1.02] transition-all duration-300"
             >
               Contact Us

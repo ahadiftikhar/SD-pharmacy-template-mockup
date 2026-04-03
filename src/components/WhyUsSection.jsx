@@ -37,7 +37,7 @@ const features = [
 
 export default function WhyUsSection() {
   return (
-    <section className="py-20 sm:py-28">
+    <section className="py-10 sm:py-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-3">Our Strengths</p>
