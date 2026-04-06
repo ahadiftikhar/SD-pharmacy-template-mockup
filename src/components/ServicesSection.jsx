@@ -6,37 +6,37 @@ const services = [
   {
     title: "Vitamin B12 Injection",
     description: "Private vitamin B12 injection service. Book online to get the injection at the pharmacy.",
-    image: "https://lynehampharmacy.co.uk/wp-content/uploads/2023/02/B12-injection-Home-.jpg",
+    image: "/images/B12-injection-Home-.jpg",
     href: "https://lynehampharmacy.co.uk/vitamin-b12-injection-swindon/",
   },
   {
     title: "Speciality Vaccine",
     description: "Book your appointment online for private speciality vaccines at our pharmacy.",
-    image: "https://lynehampharmacy.co.uk/wp-content/uploads/2022/07/travel-clinic-1.jpeg",
+    image: "/images/travel-clinic-1.jpeg",
     href: "https://lynehampharmacy.co.uk/speciality-vaccine-wiltshire/",
   },
   {
     title: "Sore Throat",
     description: "Those aged 5 years and above can access advice and NHS-funded treatment for sore throat without the need to see their GP.",
-    image: "https://lynehampharmacy.co.uk/wp-content/uploads/2024/02/treatlocal-sorethroat-pagebody-1-1920x1080-1.jpg",
+    image: "/images/treatlocal-sorethroat-pagebody-1-1920x1080-1.jpg",
     href: "https://lynehampharmacy.co.uk/pharmacy-first-sore-throat-wiltshire/",
   },
   {
     title: "Hajj & Umrah Vaccine",
     description: "We offer the meningitis ACWY vaccine for Hajj and Umrah travellers. Book online.",
-    image: "https://lynehampharmacy.co.uk/wp-content/uploads/2023/04/Untitled-design-1.jpg",
+    image: "/images/Untitled-design-1.jpg",
     href: "https://lynehampharmacy.co.uk/hajj-umrah-vaccine-wiltshire/",
   },
   {
     title: "Covid Vaccination Centre",
     description: "We offer Covid Vaccination Service in Lyneham. No appointment is needed.",
-    image: "https://lynehampharmacy.co.uk/wp-content/uploads/2022/07/covid-vaccination-center.jpg",
+    image: "/images/covid-vaccination-center.jpg",
     href: "https://lynehampharmacy.co.uk/covid-vaccination-centre/",
   },
   {
     title: "Antimalarials",
     description: "If you are planning to travel, speak to one of our pharmacists to find the right antimalarials for your trip.",
-    image: "https://lynehampharmacy.co.uk/wp-content/uploads/2022/07/antimalarials.jpg",
+    image: "/images/antimalarials.jpg",
     href: "https://lynehampharmacy.co.uk/antimalarials-wiltshire/",
   },
 ];
